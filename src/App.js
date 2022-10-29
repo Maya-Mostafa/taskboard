@@ -6,12 +6,15 @@ import EditTask from './pages/EditTask';
 import NewTask from './pages/NewTask';
 import NotFound from './pages/NotFound';
 import TaskDetails from './pages/TaskDetails';
+import Header from './layout/Header';
 // MUI
 import Container from '@mui/material/Container';
+
 
 function App() {
   return (
     <>
+      <Header />
       <Container>
         <Routes>
           <Route path="/" element={<Navigate replace to="task-board" />} />
