@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Taskboard
+A simple task management app similar to Jira, Trello or Basecamp.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stories 
+- Users can add new tasks to the task board  
+- Details include name, description, deadline 
+- Users can edit tasks and all details 
+- Users can delete tasks 
+- Users can drill into tasks to see all details
 
-## Available Scripts
+## Technical Requirements 
+Use the following frameworks: 
+1. React.js and its hooks API 
+2. React router 
+3. Material UI 
+4. React Testing Library 
+5. Jest 
+6. LocalStorage to avoid data disappearing after reload
 
-In the project directory, you can run:
+### Assumptions
+- The taskboard is initialized (hard-coded) with 1 empty column named "Todo" that contains 0 tasks.
+- Initially, the data is stored in local storage with key "taskboard"
+- The task title(name) should be unique. It is used as an identifier for the task. A better solution for this is a generated unique id.
+- The column name should be unique as it servers as a key for each groups of tasks.
 
-### `npm start`
+### Notes
+- The data structure for the taskboard is a Map, with the column name as a key, and the tasks as an array of objects with properties: name, deadline and description.
+- The Home page is the taskboard itself.
+- Unit tests are currently implemented for components only. To achieve better results, tests should be done also on router pages and local storage as mock functions.
+- The data structure of the taskboard is implemented such that it is easy to add columns afterwards. This could be done by just adding a new key to the original Map. Also, the query done in the task details/edit task/new task is taking in consideration the column name as the key for the tasks.
+- As an enhacement for the current implementation, it should be taken into consideration the deadline date to be always in the future.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
