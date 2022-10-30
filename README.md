@@ -1,6 +1,8 @@
 # Taskboard
 A simple task management app similar to Jira, Trello or Basecamp.
 
+![Taskboard Demo](demo/demo.gif)
+
 ## Stories 
 - Users can add new tasks to the task board  
 - Details include name, description, deadline 
