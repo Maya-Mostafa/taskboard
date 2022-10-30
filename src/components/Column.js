@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 // Component
 import TaskCard from "./task/TaskCard";
 
-export const Column = ({ colName, tasks, deleteTaskHandler }) => {
+const Column = ({ colName, tasks, deleteTaskHandler }) => {
 	return (
 		<Box>
 			<Typography component='h2' variant='h6' paddingBottom={2}>
@@ -35,3 +35,5 @@ export const Column = ({ colName, tasks, deleteTaskHandler }) => {
 		</Box>
 	);
 };
+
+export default Column;

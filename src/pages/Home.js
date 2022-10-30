@@ -7,7 +7,7 @@ import Container from "@mui/system/Container";
 // Components
 import {BoardMapInit} from '../constants/data';
 import {mapToArr, readLocalStorage, updateLocalStorage} from '../services/boardOps';
-import {Column} from '../components/Column';
+import Column from '../components/Column';
 
 const Home = () => {
 	
